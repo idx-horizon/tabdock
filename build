@@ -1,0 +1,12 @@
+APP=tabdock
+
+docker system prune -f
+
+echo Stopping container $APP
+docker container stop $APP
+
+echo Removing container $APP
+
+docker container rm $APP
+
+docker build --tag=tabdock .
